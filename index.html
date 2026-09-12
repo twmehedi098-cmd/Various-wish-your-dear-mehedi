@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Wish For You ❤️</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;min-height:100%;background:#050307;color:#fff;font-family:Arial,sans-serif}body{background:radial-gradient(circle at 15% 15%,#ff19691f,transparent 30%),radial-gradient(circle at 85% 80%,#743cff18,transparent 32%),#050307}button,input{font:inherit}button{cursor:pointer}.hide{display:none!important}
+#dust{position:fixed;inset:0;overflow:hidden;pointer-events:none}.dust{position:absolute;width:2px;height:2px;border-radius:50%;background:#ff2d70;box-shadow:0 0 7px #ff2d70;opacity:.35;animation:up linear infinite}@keyframes up{to{transform:translateY(-105vh)}}
+.wrap{position:relative;z-index:2;width:min(1060px,94%);margin:auto;padding:20px 0 35px}.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.brand{font-weight:900}.brand b{color:#ff2d70}.nav button,.wbtn{width:42px;height:42px;border:1px solid #28212a;border-radius:13px;background:#0c090e;color:#aaa}.nav div:last-child{display:flex;gap:8px}
+.hero{text-align:center;margin-bottom:28px}.badge{display:inline-block;border:1px solid #492032;background:#160910;color:#ff4b82;border-radius:30px;padding:7px 12px;font-size:10px;font-weight:800}.hero h1{font-size:clamp(43px,7vw,70px);line-height:1;margin:15px 0 10px;letter-spacing:-2px}.hero h1 span{color:#ff2d70}.hero p{color:#777;font-size:12px;line-height:1.7;max-width:560px;margin:auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#0d0a0fe6;border:1px solid #251f27;border-radius:25px;padding:21px;box-shadow:0 15px 50px #0008}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.title{font-size:18px;font-weight:900}.live{font-size:9px;color:#ff3977}.live i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ff2d70;margin-right:5px}
+label{display:block;color:#aaa;font-size:11px;margin-bottom:8px}.input{width:100%;height:52px;background:#070609;color:#fff;border:1px solid #29222c;border-radius:14px;padding:0 14px;outline:0;font-size:13px}.input:focus{border-color:#ff2d70}.sub{color:#aaa;font-size:11px;margin:20px 0 10px}.occs{display:grid;grid-template-columns:1fr 1fr;gap:9px}.occ{min-height:62px;border:1px solid #29222c;border-radius:14px;background:#08070a;color:#fff;display:flex;align-items:center;gap:9px;padding:8px;text-align:left}.occ.active{border-color:#ff2d70;background:#1b0911}.emo{width:39px;height:39px;flex:0 0 39px;border-radius:11px;display:grid;place-items:center;background:#151017;font-size:19px}.occ strong{display:block;font-size:11px}.occ small{display:block;color:#59535c;font-size:8px;margin-top:3px}.generate{width:100%;height:53px;border:0;border-radius:15px;background:#ff2d70;color:#fff;font-size:13px;font-weight:900;margin-top:18px;box-shadow:0 10px 30px #ff2d7030}
+.phone{height:540px;border:1px solid #29232b;border-radius:29px;padding:10px;background:#09080b}.screen{height:100%;border-radius:21px;background:#000;position:relative;overflow:hidden}.screen canvas{position:absolute;inset:0;width:100%;height:100%}.credit{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#4b474d;font-size:9px}
+.hint{text-align:center;color:#555;font-size:9px;margin-top:10px}.footer{text-align:center;color:#454047;font-size:9px;margin-top:28px}
+#result{width:min(680px,94%);margin:auto;text-align:center;padding:60px 0}.big{font-size:55px}#result h2{font-size:30px;margin:8px 0}#result p{font-size:12px;color:#777}.linkrow{display:flex;gap:7px;margin:22px 0 10px}.link{min-width:0;flex:1;height:48px;background:#08070a;border:1px solid #29222c;border-radius:13px;color:#aaa;padding:0 11px;font-size:10px}.small{height:48px;padding:0 16px;border:0;border-radius:13px;background:#ff2d70;color:#fff;font-size:11px;font-weight:800}.rbuttons{display:grid;grid-template-columns:1fr 1fr;gap:9px}.rbtn{height:50px;border-radius:14px;border:1px solid #29222c;background:#0d0a0f;color:#fff;font-size:11px;font-weight:800}.primary{background:#ff2d70;border-color:#ff2d70}
+#rotate,#count,#wish{position:fixed;inset:0;background:#000;z-index:50}.center{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}.rotphone{font-size:68px;animation:rot 1.8s infinite}@keyframes rot{50%{transform:rotate(90deg)}}.center h2{font-size:25px}.center p{color:#777;font-size:12px}.continue{height:48px;padding:0 20px;border:0;border-radius:13px;background:#ff2d70;color:#fff;font-weight:900}.ready{text-align:center;color:#666;font-size:12px}.num{text-align:center;color:#ff2d70;font-size:125px;font-weight:900;text-shadow:0 0 35px #ff2d7088;animation:pop .75s}@keyframes pop{from{opacity:0;transform:scale(1.5)}to{opacity:1;transform:scale(1)}}#wish{z-index:60;overflow:hidden}#wish canvas{position:absolute;inset:0;width:100%;height:100%}.wishbuttons{position:absolute;right:16px;top:16px;display:flex;gap:7px;z-index:4}.wbtn{width:39px;height:39px;background:#080609b3}.wishcredit{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#555;font-size:10px;z-index:4}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.phone{height:520px}}@media(min-width:761px){#rotate{display:none!important}}
+</style>
+</head>
+<body>
+<div id="dust"></div>
+<div id="rotate" class="hide"><div class="center"><div><div class="rotphone">📱</div><h2>Rotate Your Phone</h2><p>Please rotate your phone to landscape mode to continue.</p><button class="continue" id="continue">Continue ✨</button></div></div></div>
+<div id="count" class="hide"><div class="center"><div><div class="ready">Get Ready...</div><div class="num" id="num">3</div></div></div></div>
+<div id="wish" class="hide"><canvas id="wishCanvas"></canvas><div class="wishbuttons"><button class="wbtn" id="music">♪</button><button class="wbtn" id="full">⛶</button></div><div class="wishcredit">❤️ Made by MHN ❤️</div></div>
+
+<main id="main"><div class="wrap">
+<div class="nav"><div class="brand">Wish <b>For You</b> ❤️</div><div><button id="hmusic">♪</button><button id="hfull">⛶</button></div></div>
+<section id="home">
+<div class="hero"><span class="badge">✨ CREATE A SPECIAL WISH</span><h1>Wish <span>For You</span></h1><p>Create a personalized wish, preview the exact pink-dot reveal, and share the generated link.</p></div>
+<div class="grid">
+<div class="card"><div class="head"><div class="title">Create Your Wish</div></div>
+<label>Recipient Name</label><input id="name" class="input" maxlength="40" placeholder="Enter name...">
+<div class="sub">Choose Occasion</div><div class="occs">
+<button class="occ active" data-type="proposal"><span class="emo">💕</span><span><strong>Proposal</strong><small>A special feeling</small></span></button>
+<button class="occ" data-type="anniversary"><span class="emo">💖</span><span><strong>Anniversary</strong><small>Celebrate love</small></span></button>
+<button class="occ" data-type="congratulations"><span class="emo">🎓</span><span><strong>Congratulations</strong><small>Celebrate success</small></span></button>
+<button class="occ" data-type="newyear"><span class="emo">🎊</span><span><strong>New Year</strong><small>New beginning</small></span></button>
+<button class="occ" data-type="babybirth"><span class="emo">👶</span><span><strong>Baby Birth</strong><small>Welcome baby</small></span></button>
+<button class="occ" data-type="thankyou"><span class="emo">🙏</span><span><strong>Thank You</strong><small>Show gratitude</small></span></button>
+<button class="occ" data-type="sorry"><span class="emo">🥺</span><span><strong>Sorry</strong><small>Say sorry</small></span></button>
+</div><button class="generate" id="generate">Generate Wish Link ✨</button></div>
+<div class="card"><div class="head"><div class="title">Live Preview</div><div class="live"><i></i> LIVE</div></div><div class="phone"><div class="screen"><canvas id="previewCanvas"></canvas><div class="credit">Made by Mehedi ❤️</div></div></div><div class="hint">Same pink-dot engine is used for the shared wish.</div></div>
+</div><div class="footer">Made by Mehedi ❤️</div>
+</section>
+
+<section id="result" class="hide"><div class="big">🎉</div><h2>Your Wish is Ready!</h2><p>Your personalized link is ready to share.</p><div class="linkrow"><input id="generated" class="link" readonly><button class="small" id="copy">Copy</button></div><div class="rbuttons"><button class="rbtn primary" id="preview">👀 Preview Wish</button><button class="rbtn" id="share">📤 Share</button><button class="rbtn" id="new">✨ New Wish</button><button class="rbtn" id="homebtn">⌂ Home</button></div></section>
+</div></main>
+<audio id="audio" loop></audio>
+
+<script>
+const DATA={
+proposal:n=>`I Love You Very Much 🎀${n}🎀`,
+anniversary:n=>`Happy Anniversary ${n} ❤️❤️`,
+congratulations:n=>`Congratulations ${n} 👨‍🎓👨‍🎓`,
+newyear:n=>`Happy New Year ${n} 🎊✨`,
+babybirth:n=>`Welcome Little One 👶`,
+thankyou:n=>`Thank You So Much ${n} 🫀🫀`,
+sorry:n=>`I'm Really Sorry ${n} 🙏🙏`
+};
+let selected="proposal",receiver=null,running=false;
+const $=x=>document.getElementById(x);
+for(let i=0;i<65;i++){let d=document.createElement("i");d.className="dust";d.style.left=Math.random()*100+"%";d.style.bottom="-5px";d.style.animationDuration=7+Math.random()*12+"s";d.style.animationDelay=-Math.random()*15+"s";$("dust").appendChild(d)}
+function setup(c){let r=c.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);c.width=r.width*d;c.height=r.height*d;let x=c.getContext("2d");x.setTransform(d,0,0,d,0,0);return[x,r.width,r.height]}
+function wrap(x,t,m){
+  let a=[],l="";
+  for(let w of t.split(" ")){
+    let q=l?l+" "+w:w;
+    if(x.measureText(q).width>m&&l){a.push(l);l=w}else l=q
+  }
+  if(l)a.push(l);
+  return a
+}
+
+/* Build a much cleaner dot-text target.
+   The text is separated into WORDS so the animation can reveal:
+   I → Love → You → Name → etc. */
+function makeWordTargets(text,w,h){
+  const tokenized=text.trim().split(/\s+/);
+  const words=[];
+
+  /* Keep the recipient name and BOTH hearts together as one target.
+     Example: ❤️ Mehedi ❤️ forms at the same time. */
+  tokenized.forEach(token=>{
+    const m=token.match(/^\[\[NAME:(.*)\]\]$/);
+    if(m){
+      words.push(`❤️ ${m[1]} ❤️`);
+    }else{
+      words.push(token);
+    }
+  });
+
+  const fsBase=Math.min(w*.105,58);
+  const groups=[];
+
+  words.forEach((word,index)=>{
+    const off=document.createElement("canvas");
+    off.width=Math.floor(w); off.height=Math.floor(h);
+    const c=off.getContext("2d");
+    let fs=fsBase;
+    c.font=`900 ${fs}px Arial`;
+    while(c.measureText(word).width>w*.78 && fs>18){
+      fs-=2; c.font=`900 ${fs}px Arial`;
+    }
+
+    c.clearRect(0,0,w,h);
+    c.font=`900 ${fs}px Arial`;
+    c.fillStyle="#fff";
+    c.textAlign="center";
+    c.textBaseline="middle";
+    c.fillText(word,w/2,h/2);
+
+    const img=c.getImageData(0,0,Math.floor(w),Math.floor(h)).data;
+    const pts=[];
+    const step=w<500?2:3;
+    for(let y=0;y<h;y+=step){
+      for(let x=0;x<w;x+=step){
+        if(img[(y*Math.floor(w)+x)*4+3]>100) pts.push({x,y});
+      }
+    }
+
+    groups.push({word,points:pts});
+  });
+  return groups;
+}
+
+function draw(c,text,quality="preview"){
+  cancelAnimationFrame(c._raf);
+  let [x,w,h]=setup(c);
+  const groups=makeWordTargets(text,w,h);
+  if(!groups.length)return;
+
+  /*
+    The words do NOT stay on one line.
+    Every word appears alone in the exact center:
+
+      I
+      ↓ dots scatter
+      Love
+      ↓ dots scatter
+      You
+
+    This gives the same kind of cinematic dot-morph effect as the
+    birthday reference: one word forms, breaks apart, then the next word forms.
+  */
+  const gap=quality==="wish" ? .18 : .10;
+  const form=quality==="wish" ? 1.35 : .75;
+  const hold=quality==="wish" ? 1.75 : 1.0;
+  const scatter=quality==="wish" ? 1.15 : .55;
+  const cycle=form+hold+scatter+gap;
+  const start=performance.now();
+
+  function f(now){
+    const sec=(now-start)/1000;
+    x.clearRect(0,0,w,h);
+
+    for(let i=0;i<65;i++){
+      x.beginPath();
+      x.fillStyle="rgba(255,45,112,.10)";
+      x.arc((i*83)%w,(i*137)%h,1,0,Math.PI*2);
+      x.fill();
+    }
+
+    groups.forEach((g,gi)=>{
+      const local=sec-gi*cycle;
+      if(local<0)return;
+
+      const inT=Math.min(1,Math.max(0,local/form));
+      const holdT=local-form;
+      const outT=local-form-hold;
+
+      /* Before the word starts, keep it invisible. */
+      if(local<0 || outT>scatter)return;
+
+      g.points.forEach((pt,j)=>{
+        const seed=(j*47+gi*131)%1000;
+        const sx=w/2 + (((seed*37)%1000)/1000-.5)*w*.62;
+        const sy=h/2 + (((seed*91)%1000)/1000-.5)*h*.62;
+
+        let xx,yy,alpha=1;
+
+        if(local<form){
+          const e=1-Math.pow(1-inT,3);
+          xx=sx+(pt.x-sx)*e;
+          yy=sy+(pt.y-sy)*e;
+          alpha=.15+.85*e;
+        }else if(holdT<=0){
+          xx=pt.x; yy=pt.y;
+        }else{
+          const out=Math.min(1,Math.max(0,outT/scatter));
+          const e=out*out;
+          const dx=Math.sin(seed*12.7)*w*.22;
+          const dy=Math.cos(seed*7.3)*h*.22;
+          xx=pt.x+(dx)*e;
+          yy=pt.y+(dy)*e;
+          alpha=1-e;
+        }
+
+        const pulse=1+.10*Math.sin(sec*3.4+j*.04);
+        x.beginPath();
+        x.fillStyle=`rgba(255,45,112,${alpha})`;
+        x.shadowBlur=quality==="wish"?5:3;
+        x.shadowColor="#ff2d70";
+        x.arc(xx,yy,.95*pulse,0,Math.PI*2);
+        x.fill();
+      });
+    });
+
+    x.shadowBlur=0;
+    /* loop forever so the words keep cycling */
+    if(sec>groups.length*cycle+.5){
+      c._raf=requestAnimationFrame(()=>{
+        /* restart cleanly */
+        draw(c,text,quality);
+      });
+      return;
+    }
+    c._raf=requestAnimationFrame(f);
+  }
+  c._raf=requestAnimationFrame(f);
+}
+function update(){let n=$("name").value.trim()||"Friend";draw($("previewCanvas"),DATA[selected](n))}
+update();$("name").addEventListener("input",update);
+document.querySelectorAll(".occ").forEach(b=>b.onclick=()=>{document.querySelectorAll(".occ").forEach(q=>q.classList.remove("active"));b.classList.add("active");selected=b.dataset.type;update()});
+function makeURL(t,n){let u=new URL(location.href);u.search="";u.searchParams.set("type",t);u.searchParams.set("name",n);return u.toString()}
+$("generate").onclick=()=>{let n=$("name").value.trim();if(!n){$("name").focus();return}$("generated").value=makeURL(selected,n);$("home").classList.add("hide");$("result").classList.remove("hide");scrollTo(0,0)};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText($("generated").value)}catch{$("generated").select();document.execCommand("copy")}$("copy").textContent="Copied ✓";setTimeout(()=>$("copy").textContent="Copy",1300)};
+$("share").onclick=async()=>{let u=$("generated").value;if(navigator.share){try{await navigator.share({title:"Wish For You ❤️",text:"A special wish for you ❤️",url:u})}catch{}}else{try{await navigator.clipboard.writeText(u)}catch{}alert("Wish link copied!")}};
+function home(){location.href=location.pathname}
+$("new").onclick=home;$("homebtn").onclick=home;
+async function full(){try{document.fullscreenElement?await document.exitFullscreen():await document.documentElement.requestFullscreen()}catch{}}
+$("hfull").onclick=full;$("full").onclick=full;
+function music(){if(!$("audio").src)return;let a=$("audio");a.paused?a.play().catch(()=>{}):a.pause()}$("hmusic").onclick=music;$("music").onclick=music;
+function read(){let p=new URLSearchParams(location.search),t=p.get("type");return t&&DATA[t]?{type:t,name:p.get("name")||"Friend"}:null}
+function start(){receiver=read();if(!receiver)return;$("main").classList.add("hide");if(innerWidth<=760&&innerHeight>innerWidth)$("rotate").classList.remove("hide");else countdown()}
+$("continue").onclick=countdown;
+addEventListener("resize",()=>{if(receiver&&!running&&$("wish").classList.contains("hide")&&innerWidth>innerHeight){$("rotate").classList.add("hide");countdown()}});
+function countdown(){
+  if(running)return;
+  running=true;
+  $("rotate").classList.add("hide");
+  $("count").classList.remove("hide");
+
+  const steps=["3","2","1","GO"];
+
+  function showStep(i){
+    $("num").textContent=steps[i];
+    $("num").style.animation="none";
+    void $("num").offsetWidth;
+    $("num").style.animation="pop .72s";
+
+    // Every number, including GO, stays for exactly 1 second.
+    setTimeout(()=>{
+      if(i < steps.length-1){
+        showStep(i+1);
+      }else{
+        $("count").classList.add("hide");
+        $("wish").classList.remove("hide");
+        draw($("wishCanvas"),DATA[receiver.type](receiver.name),"wish");
+        running=false;
+      }
+    },1000);
+  }
+
+  showStep(0);
+}
+$("preview").onclick=()=>{let u=new URL($("generated").value);receiver={type:u.searchParams.get("type"),name:u.searchParams.get("name")||"Friend"};$("result").classList.add("hide");$("main").classList.remove("hide");$("home").classList.add("hide");countdown()};
+addEventListener("load",()=>{if(read())start()});
+</script>
+</body>
+</html>
